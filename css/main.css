@@ -19,12 +19,27 @@ h6 {
 h2{
   font-size: 2.2rem;
 }
+/* adds style to the top design*/
+.skip-top{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.skip-top a{
+  position: absolute;
+  top: -3em;
+  background-color: black;
+  color:white;
+  font-weight: bold;
+}
+.skip-top a:focus{
+  top: 0;
+}
 
 .container {
   max-width: 1080px;
   margin: 0 auto;
 }
-
 img {
   width: 100%;
 }
@@ -57,21 +72,28 @@ img {
   padding: 1rem;
 
 }
-
+/* increases line height and font size for the paragraph*/
 .main-content p {
   font-size: 1.5em;
   line-height: 1.5em;
-  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+}
+.main-content .focus-links{
+  font-size: 1.3em;
+  line-height: 1.5em;
+  
 }
 .owner li{
   list-style-type: none;
   font-size: 1.5em;
-  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
 }
+/* adds style to the contact form to change font weight, color */
 .form {
   border: 1px solid black;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 4px 4px 4px 4px;
+  padding: 4px 6px 8px 2px;
+  font-weight: 300;
 }
 
 form label{
@@ -100,7 +122,7 @@ form button {
   border-radius: 10%;
   padding: 1rem;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: 8em;
 }
 form button:hover{
@@ -118,8 +140,10 @@ form button:hover{
 }
 .site-footer a:hover{
   background-color: black;
+  border: 1px solid black;
   color: white;
   padding: 1rem;
+  text-decoration: none;
 }
 
 .site-footer {

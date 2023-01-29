@@ -6,16 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accessible Me</title>
+  <!--link for fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+<!--custom css file-->  
+<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <div class="container">
-    <a href="#main-content" class="skip-links" aria-label="Jump directly to the main content">Skip to the Main Content</a>
+    <!--skip link to junp to main content-->
+    <ul class="skip-top">
+      <li>
+        <a href="#main-content" aria-label="Jump directly to the main content">Skip to the Main Content</a>
+      </li>
+    </ul>
+
     <!--added ARIA role-->
     <header role="banner">
       <div class="site-header">
@@ -40,30 +51,34 @@
           <!--Adds skip links-->
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa
             eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis
-            optioquia veritatis. <a href="#reservation" class="skip-links" aria-label="Going to the contact us">Skip to Contact Us</a> </p>
+            optioquia veritatis.</p>
+          <!--adds a focus link-->  
+          <a href="#reservation" class="focus-links" aria-label="Going to the contact us">Skip to Contact Us</a>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam
             omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto
             error voluptatibus.</p>
         </article>
-        <aside role="complementary"></aside>
-        <div class="owner">
-          <h2>Meet the owner</h2>
-          <!--added schema information the list-->
-          <ul itemscope itemtype="https://schema.org/Person">
-            <li itemprop="name">Name: John Doe</li>
-            <li itemprop="jobTitle">Title: CEO</li>
-            <li itemprop="email">Email: johnjoe@jambox.ca</li>
-            <li itemprop="telephone">Phone: 613-000-0000</li>
-          </ul>
-          <h2 id="address">Address</h2>
-          <p>
-            Jambox Studios
-            123 Guitar Road,
-            Musicville, Danceistan
-            B3T 0L0
-          </p>
-        </div>
-        <!--fixs HTML schemas-->
+        <aside role="complementary">
+          <div class="owner">
+            <h2>Meet the owner</h2>
+            <!--added schema information the list-->
+            <ul itemscope itemtype="https://schema.org/Person">
+              <li itemprop="name">Name: John Doe</li>
+              <li itemprop="jobTitle">Title: CEO</li>
+              <li itemprop="email">Email: johnjoe@jambox.ca</li>
+              <li itemprop="telephone">Phone: 613-000-0000</li>
+            </ul>
+            <h2 id="address">Address</h2>
+            <p>
+              Jambox Studios
+              123 Guitar Road,
+              Musicville, Danceistan
+              B3T 0L0
+            </p>
+          </div>
+        </aside>
+        
+        <!--fixes HTML schemas-->
         <div class="contact-section" id="reservation">
           <h2>Contact Us</h2>
           <form action="thanks.html" class="form">
@@ -80,9 +95,10 @@
         </div>
       </div>
     </main>
+    <!--adds footer and a skip link to jump to the top-->
     <footer role="contentinfo">
       <div class="site-footer">
-        <p><a href="#top" aria-label="Going back to the top" class="skip-links">Back to Top &uArr;</a></p>
+        <p><a href="#top" aria-label="Going back to the top" class="skip-links">Back to Top</a></p>
         &copy; 2021 Jam Box Studios.
       </div>
     </footer>
